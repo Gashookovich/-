@@ -5,6 +5,7 @@ import {observer} from "mobx-react-lite";
 import Video from "./components/video";
 import {IUser} from "./models/IUser";
 import UserService from "./service/UserService";
+import './style.css';
 
 const App: FC = () => {
     const {store} = useContext(Context);
@@ -26,7 +27,7 @@ const App: FC = () => {
     }
 
     if (store.isLoading) {
-        return <div>Загрузка...</div>
+        return <div className={'block_loading'}>Загрузка...</div>
     }
 
     if (!store.isAuth) {
@@ -39,18 +40,18 @@ const App: FC = () => {
 
     if (!store.user.isActivated) {
         return (
-            <div>
-                <h1>Проверьте почту и ПОДТВЕРДИТЕ АККАУНТ</h1>
+            <div className={'block_examination'}>
+                <h1 className={'block_examination-head'}>Проверьте почту и ПОДТВЕРДИТЕ АККАУНТ</h1>
             </div>
         )
     }
 
     return (
-        <div>
-            <h1>{store.isAuth ? `Пользователь авторизован ${store.user.email}` : `АВТОРИЗУЙТЕСЬ`}</h1>
-            <h1>{store.user.isActivated ? 'Аккаунт подтверждён по почте' : 'ПОДТВЕРДИТЕ АККАУНТ!!!'}</h1>
+        <div className={'block-user_container'}>
+            <h1 className={'block-user_container-head'}>{store.isAuth ? `Пользователь авторизован ${store.user.email}` : `АВТОРИЗУЙТЕСЬ`}</h1>
+            <h2 className={'block-user_container-text'}>{store.user.isActivated ? 'Аккаунт подтверждён по почте' : 'ПОДТВЕРДИТЕ АККАУНТ!!!'}</h2>
             <Video/>
-            <button onClick={() => store.logout()}>Выйти</button>
+            <button className={'block-user_container-exit'} onClick={() => store.logout()}>Выйти</button>
         </div>
     );
 };

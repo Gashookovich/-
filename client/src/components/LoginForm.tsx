@@ -1,6 +1,7 @@
 import React, {FC, useContext, useState} from 'react';
 import {Context} from "../index";
 import {observer} from "mobx-react-lite";
+import '../components/loginForm.css';
 
 
 const LoginForm: FC = () => {
@@ -9,24 +10,26 @@ const LoginForm: FC = () => {
     const {store} = useContext(Context);
 
     return (
-        <div>
-            <h1>Приветствую тебя! Прошу пройти регистрацию, чтобы получить доступ к видео-урокам</h1>
+        <div className={'block-form_container'}>
+            <h1 className={'block-form_container-head'}>Приветствую тебя в рядах участников тренинга Марии Погодиной. Прошу пройти регистрацию, чтобы получить доступ к видео-урокам</h1>
             <input
+                className={'block-form_container-email'}
                 onChange={e => setEmail(e.target.value)}
                 value={email}
                 type="text"
                 placeholder='Email'
             />
             <input
+                className={'block-form_container-password'}
                 onChange={e => setPassword(e.target.value)}
                 value={password}
                 type="password"
                 placeholder='Пароль'
             />
-            <button onClick={() => store.login(email, password)}>
+            <button className={'block-form_container-login'} onClick={() => store.login(email, password)}>
                 Логин
             </button>
-            <button onClick={() => store.registration(email, password)}>
+            <button className={'block-form_container-registration'} onClick={() => store.registration(email, password)}>
                 Регистрация
             </button>
         </div>

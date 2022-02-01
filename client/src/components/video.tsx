@@ -1,8 +1,9 @@
 import React from 'react';
+import './video.css';
 
 const Video = () => {
     return (
-        <div>
+        <div className={'block-video_container'}>
             <iframe
                 width="640" height="360" src="https://www.youtube.com/embed/ALUKDkOxVPo"
                 title="YouTube video player" frameBorder="0"

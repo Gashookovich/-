@@ -1,75 +1,123 @@
 .block-form_container {
-    background: #EEE8AA;
+    background: #0C2351;
     display: grid;
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    }
+}
+
+.block-form_container-up {
+    display: flex;
+    justify-content: space-between;
+}
 
 .block-form_container-head {
+    position: relative;
+    top: 100px;
     font-family: Bradley Hand, cursive;
-    font-size: 30px;
+    font-size: 40px;
+    color: #dc9a2d;
     font-weight: bold;
     text-align: center;
 }
 
+.block-form_container-image {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    width: 50%;
+    height: 100%;
+    border-radius: 150px;
+    border: 2px solid #dc9a2d;
+}
+
 .block-form_container-email {
+    background: #0C2351;
     position: relative;
     left: 25%;
     width: 50%;
-    height: 25px;
+    height: 50px;
     font-family: Bradley Hand, cursive;
-    border: 2px solid black;
+    font-size: 20px;
+    color: #dc9a2d;
+    border: 3px solid #dc9a2d;
     border-radius: 30px;
     margin-top: 25px;
 }
 
+.block-form_container-email::placeholder {
+    color: #dc9a2d;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
 .block-form_container-password {
+    background: #0C2351;
     position: relative;
     left: 25%;
     width: 50%;
-    height: 25px;
+    height: 50px;
     font-family: Bradley Hand, cursive;
-    border: 2px solid black;
+    font-size: 20px;
+    color: #dc9a2d;
+    border: 3px solid #dc9a2d;
     border-radius: 30px;
     margin-top: 25px;
+}
+
+.block-form_container-password::placeholder {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #dc9a2d;
 }
 
 .block-form_container-login {
     position: relative;
     left: 25%;
-    width: 50%;
-    height: 28px;
+    width: 50.8%;
+    height: 55px;
     font-family: Bradley Hand, cursive;
-    font-size: 15px;
+    color: #dc9a2d;
+    font-size: 20px;
     font-weight: bold;
-    background: #EEE8AA;
-    border: 2px solid black;
+    background: #0C2351;
+    border: 3px solid #dc9a2d;
     border-radius: 30px;
     margin-top: 25px;
 }
 
 .block-form_container-login:hover {
-    background: #DDA0DD;
-    border: 2px solid black;
+    background: #e9d39f;
+    color: #211f22;
+    border: 3px solid #211f22;
 }
 
 .block-form_container-registration {
     position: relative;
     left: 25%;
-    width: 50%;
-    height: 28px;
+    width: 50.8%;
+    height: 55px;
     font-family: Bradley Hand, cursive;
-    font-size: 15px;
+    color: #dc9a2d;
+    font-size: 20px;
     font-weight: bold;
-    background: #EEE8AA;
-    border: 2px solid black;
+    background: #0C2351;
+    border: 3px solid #dc9a2d;
     border-radius: 30px;
     margin-top: 25px;
     margin-bottom: 20px;
 }
 
 .block-form_container-registration:hover {
-    background: #DDA0DD;
-    border: 2px solid black;
+    background: #e9d39f;
+    color: #211f22;
+    border: 3px solid #211f22;
+}
+
+.block-form_container-footer {
+    font-family: Bradley Hand, cursive;
+    color: #dc9a2d;
+    padding-left: 10%;
 }

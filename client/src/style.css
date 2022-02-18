@@ -1,32 +1,62 @@
 .block_loading {
-    background: #EEE8AA;
+    background: #0C2351;
     width: 100%;
     height: 100%;
     font-size: 20px;
+    color: #dc9a2d;
     text-align: center;
     font-family: Bradley Hand, cursive;
 }
 
 .block_examination {
-    background: #EEE8AA;
+    background: #0C2351;
     width: 100%;
     height: 100%;
 }
 
 .block_examination-head {
     font-size: 30px;
+    color: #dc9a2d;
     text-align: center;
     font-family: Bradley Hand, cursive;
 }
 
+.block_examination-exit {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 28px;
+    font-family: Bradley Hand, cursive;
+    font-size: 15px;
+    color: #dc9a2d;
+    font-weight: bold;
+    background: #0C2351;
+    border: 2px solid #dc9a2d;
+    border-radius: 30px;
+    margin-top: 5px;
+}
+
+.block_examination-exit:hover {
+    background: #e9d39f;
+    border: 2px solid #211f22;
+    color: #211f22;
+}
+
+.block_examination-footer {
+    font-family: Bradley Hand, cursive;
+    color: #dc9a2d;
+    padding-left: 10%;
+}
+
 .block-user_container {
-    background: #EEE8AA;
+    background: #0C2351;
     display: grid;
 }
 
 .block-user_container-head {
     font-family: Bradley Hand, cursive;
     font-size: 30px;
+    color: #dc9a2d;
     font-weight: bold;
     text-align: center;
 }
@@ -34,6 +64,7 @@
 .block-user_container-text {
     font-family: Bradley Hand, cursive;
     font-size: 25px;
+    color: #dc9a2d;
     font-weight: bold;
     text-align: center;
 }
@@ -45,14 +76,22 @@
     height: 28px;
     font-family: Bradley Hand, cursive;
     font-size: 15px;
+    color: #dc9a2d;
     font-weight: bold;
-    background: #EEE8AA;
-    border: 2px solid black;
+    background: #0C2351;
+    border: 2px solid #dc9a2d;
     border-radius: 30px;
     margin-top: 5px;
 }
 
 .block-user_container-exit:hover {
-    background: #DDA0DD;
-    border: 2px solid black;
+    background: #e9d39f;
+    border: 2px solid #211f22;
+    color: #211f22;
+}
+
+.block-user_container-footer {
+    font-family: Bradley Hand, cursive;
+    color: #dc9a2d;
+    padding-left: 10%;
 }

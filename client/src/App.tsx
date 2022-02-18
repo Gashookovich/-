@@ -42,6 +42,10 @@ const App: FC = () => {
         return (
             <div className={'block_examination'}>
                 <h1 className={'block_examination-head'}>Проверьте почту и ПОДТВЕРДИТЕ АККАУНТ</h1>
+                <button className={'block_examination-exit'} onClick={() => store.logout()}>Выйти</button>
+                <div className={'block_examination-footer'}>
+                    <h2>© xbyhex 2022</h2>
+                </div>
             </div>
         )
     }
@@ -52,6 +56,9 @@ const App: FC = () => {
             <h2 className={'block-user_container-text'}>{store.user.isActivated ? 'Аккаунт подтверждён по почте' : 'ПОДТВЕРДИТЕ АККАУНТ!!!'}</h2>
             <Video/>
             <button className={'block-user_container-exit'} onClick={() => store.logout()}>Выйти</button>
+            <div className={'block-user_container-footer'}>
+                <h2>© xbyhex 2022</h2>
+            </div>
         </div>
     );
 };

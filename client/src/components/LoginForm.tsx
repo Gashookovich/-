@@ -2,6 +2,7 @@ import React, {FC, useContext, useState} from 'react';
 import {Context} from "../index";
 import {observer} from "mobx-react-lite";
 import '../components/loginForm.css';
+import image from '../img/photo.jpg';
 
 
 const LoginForm: FC = () => {
@@ -11,7 +12,10 @@ const LoginForm: FC = () => {
 
     return (
         <div className={'block-form_container'}>
-            <h1 className={'block-form_container-head'}>Приветствую тебя в рядах участников тренинга Марии Погодиной. Прошу пройти регистрацию, чтобы получить доступ к видео-урокам</h1>
+            <div className={'block-form_container-up'}>
+                <h1 className={'block-form_container-head'}>Приветствую тебя в рядах участников практикума Марии Погодиной. Прошу пройти регистрацию, чтобы получить доступ к видео-урокам</h1>
+                <img src={image} alt={'Maria Pogodina'} className={'block-form_container-image'}/>
+            </div>
             <input
                 className={'block-form_container-email'}
                 onChange={e => setEmail(e.target.value)}
@@ -32,6 +36,9 @@ const LoginForm: FC = () => {
             <button className={'block-form_container-registration'} onClick={() => store.registration(email, password)}>
                 Регистрация
             </button>
+            <div className={'block-form_container-footer'}>
+                <h2>© xbyhex 2022</h2>
+            </div>
         </div>
     );
 };

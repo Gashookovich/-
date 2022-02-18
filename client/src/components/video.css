@@ -1,3 +1,22 @@
-.block-video_container {
+.block-video {
     margin: 20px 25px;
+}
+
+.block-video_container {
+    display: grid;
+}
+
+.block-video_container-head {
+    font-family: Bradley Hand, cursive;
+    font-size: 40px;
+    color: #dc9a2d;
+    font-weight: bold;
+}
+
+.block-video_container-footer {
+    font-family: Bradley Hand, cursive;
+    font-size: 30px;
+    color: #dc9a2d;
+    font-weight: bold;
+    margin-top: 20px;
 }
